@@ -14,6 +14,19 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 14
   m_Mesh: {fileID: 4300000, guid: 7ff17ca6194d1ab44bf77fd625d4cc45, type: 3}
+--- !u!114 &899388639556282992
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 433986245878732535}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ca05d66a521d319438a64ad6a58733ce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scorepoints: 10
 --- !u!114 &9068219063906953458
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -26,6 +39,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0841f933bc4bcbc4e9dd8c8c0ef74ced, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  scoreManager: {fileID: 0}
+  mercaderiaScript: {fileID: 0}
 --- !u!1 &6807069109063616581
 GameObject:
   m_ObjectHideFlags: 0
@@ -50,7 +65,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6807069109063616581}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.8155227, y: 1, z: 0.8178811}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -95,7 +110,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 7ff17ca6194d1ab44bf77fd625d4cc45, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -0.79
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 7ff17ca6194d1ab44bf77fd625d4cc45, type: 3}
       propertyPath: m_LocalRotation.x
