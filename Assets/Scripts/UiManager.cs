@@ -23,7 +23,7 @@ public class UiManager : MonoBehaviour
     }
     public void UpdateHealth(int health)
     {
-        txtHealth.text = "Score: " + health.ToString();
+        txtHealth.text = "Health: " + health.ToString();
     }
 
 }

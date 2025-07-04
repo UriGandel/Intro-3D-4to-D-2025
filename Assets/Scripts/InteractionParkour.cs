@@ -1,12 +1,12 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class InteractionArea : MonoBehaviour
+public class InteractionParkour : MonoBehaviour
 {
     public GameObject UIinteractionMessage;
     public bool canInteract;
-    MercaderiaScript mercaderia;
+    public GameObject currentInteractable;
     // Start is called before the first frame update
     void Start()
     {
@@ -17,35 +17,36 @@ public class InteractionArea : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.E))
+        if (Input.GetKeyDown(KeyCode.E) && currentInteractable != null && canInteract)
         {
-            if (canInteract)
-            {
-                Destroy(mercaderia.gameObject);
-                EndInteraction();
-            }
+            Destroy(currentInteractable);
+            currentInteractable = null;
+            EndInteraction();
+
         }
     }
 
     private void OnTriggerEnter(Collider other)
     {
-        mercaderia = other.GetComponent<MercaderiaScript>();
-        if (mercaderia)
+        if (other.gameObject.CompareTag("Interactable"))
         {
             UIinteractionMessage.SetActive(true);
             canInteract = true;
-
+            currentInteractable = other.gameObject;
 
         }
     }
     private void OnTriggerExit(Collider other)
     {
-        EndInteraction();
+        if (other.gameObject.CompareTag("Interactable") && other.gameObject == currentInteractable)
+        {
+            EndInteraction();
+        }
     }
     void EndInteraction()
     {
         UIinteractionMessage.SetActive(false);
         canInteract = false;
-        mercaderia = null;
+        currentInteractable = null;
     }
 }
