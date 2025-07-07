@@ -23,7 +23,7 @@ public class DetectorDeColisiones : MonoBehaviour
             Destroy(gameObject);
             scoreManager.AddScore(mercaderiaScript.scorepoints);
         }
-       }
-    
-    
+    }
+
+
 }

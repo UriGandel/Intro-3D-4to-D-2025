@@ -16,14 +16,14 @@ public class ScoreManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
     }
     public void AddScore()
     {
         score++;
         uiManager.UpdateScore(score);
     }
-    public void  AddScore(int scorePoints)
+    public void AddScore(int scorePoints)
     {
         score += scorePoints;
         uiManager.UpdateScore(score);
